@@ -1,6 +1,6 @@
 # **Andrew Humble - Portfolio**
 
-<a href="https://andrewhumble.dev/" target="_blank" rel="noopener noreferrer">andrewhumble.dev</a>
+> [andrewhumble.dev](https://andrewhumble.dev/)  
 
 A clean, beautiful, responsive portfolio showcasing my projects, writing posts, and other work, built with modern web technologies for speed, accessibility, and aesthetics.
 
