@@ -1,6 +1,6 @@
 # **Andrew Humble - Portfolio**
 
-> andrewhumble.dev  
+> [andrewhumble.dev](https://andrewhumble.dev/)  
 
 A clean, beautiful, responsive portfolio showcasing my projects, writing posts, and other work, built with modern web technologies for speed, accessibility, and aesthetics.
 
