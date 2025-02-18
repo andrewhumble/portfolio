@@ -1,6 +1,11 @@
 # **Andrew Humble - Portfolio**
 
-Welcome to my personal portfolio! This website showcases my projects, blog posts, and photography, built with modern web technologies for speed, accessibility, and aesthetics.
+> andrewhumble.dev  
+
+A clean, beautiful, responsive portfolio showcasing my projects, writing posts, and other work, built with modern web technologies for speed, accessibility, and aesthetics.
+
+## **Website Preview**
+![Website Preview](public/website-preview.png)
 
 ## 🚀 **Tech Stack**
 
@@ -8,10 +13,8 @@ Welcome to my personal portfolio! This website showcases my projects, blog posts
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **Hosting**: [Vercel](https://vercel.com/)
 
-## 🌟 **Features**
+## 🌟 **Sections**
 
-- **Projects Showcase** — Things I have created
-- **Writing Portfolio** — See what I've been thinking on Medium
-- **Interactive Guitar Graphic** — Custom string animation using [Tone](https://github.com/Tonejs/Tone.js) for audio synthesis
-- **Optimized Performance** – Fast load times and SEO-friendly setup
-- **Clean, Engaging Design** – Best principles for a pleasent user experience 
+- **Projects** — Things I have created
+- **Writing** — See what I've been thinking on Medium
+- **Socials** — Ways to reach me
