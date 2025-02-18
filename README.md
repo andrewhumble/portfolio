@@ -5,7 +5,9 @@
 A clean, beautiful, responsive portfolio showcasing my projects, writing posts, and other work, built with modern web technologies for speed, accessibility, and aesthetics.
 
 ## **Website Preview**
-![Website Preview](public/website-preview.png)
+<a href="public/website-preview.png" target="_blank">
+    ![Website Preview](public/website-preview.png)
+</a>
 
 ## 🚀 **Tech Stack**
 
