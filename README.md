@@ -1,13 +1,11 @@
 # **Andrew Humble - Portfolio**
 
-> [andrewhumble.dev](https://andrewhumble.dev/)  
+<a href="https://andrewhumble.dev/" target="_blank" rel="noopener noreferrer">andrewhumble.dev</a>
 
 A clean, beautiful, responsive portfolio showcasing my projects, writing posts, and other work, built with modern web technologies for speed, accessibility, and aesthetics.
 
 ## **Website Preview**
-<a href="public/website-preview.png" target="_blank">
-    ![Website Preview](public/website-preview.png)
-</a>
+![Website Preview](public/website-preview.png)
 
 ## 🚀 **Tech Stack**
 
