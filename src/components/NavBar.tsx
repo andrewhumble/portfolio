@@ -10,6 +10,13 @@ interface NavBarProps {
     className?: string;
 }
 
+const DarkModeToggle: React.FC<{
+    checked: boolean;
+    onChange: () => void;
+    size: number;
+    moonColor: string;
+}> = DarkModeSwitch as unknown as React.FC;
+
 export const NavBar: React.FC<NavBarProps> = ({ fretboardRef, className }) => {
     const { theme, toggleTheme } = useTheme();
 
@@ -29,7 +36,7 @@ export const NavBar: React.FC<NavBarProps> = ({ fretboardRef, className }) => {
             </div>
             <div className="flex flex-col justify-end">
                 <div className="flex justify-center rounded mb-6">
-                    <DarkModeSwitch
+                    <DarkModeToggle
                         checked={theme === 'dark'}
                         onChange={handleToggleTheme}
                         size={20}
