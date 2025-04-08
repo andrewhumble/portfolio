@@ -9,10 +9,10 @@ interface SocialLink {
 }
 
 const socialLinks: SocialLink[] = [
-  { href: "https://www.linkedin.com/in/andrewhumble", Icon: IconBrandLinkedin, external: true },
-  { href: "https://github.com/andrewhumble", Icon: IconBrandGithub, external: true },
-  // { href: "https://medium.com/@yourprofile", Icon: IconBrandMedium, external: true },
-  { href: "mailto:cahumble7@gmail.com", Icon: IconMail }
+  { href: "https://www.linkedin.com/in/andrewhumble", Icon: (props) => <IconBrandLinkedin {...props} />, external: true },
+  { href: "https://github.com/andrewhumble", Icon: (props) => <IconBrandGithub {...props} />, external: true },
+  // { href: "https://medium.com/@yourprofile", Icon: (props) => <IconBrandMedium {...props} />, external: true },
+  { href: "mailto:cahumble7@gmail.com", Icon: (props) => <IconMail {...props} />, external: true }
 ];
 
 interface FooterProps {
