@@ -138,13 +138,13 @@ const Fretboard = forwardRef(({ }: FretboardProps, ref) => { // TODO: pass song
 
   const getColor = () => {
     return {
-      circleFill: theme === 'dark' 
+      circleFill: theme === 'dark'
         ? (isMobile ? 'white' : 'white') // dark mode
         : (isMobile ? 'black' : 'black'), // light mode
-      circleStroke: theme === 'dark' 
+      circleStroke: theme === 'dark'
         ? (isMobile ? '#e9e9e9' : '#e9e9e9')
         : (isMobile ? '#161616' : '#161616'),
-      pathStroke: theme === 'dark' 
+      pathStroke: theme === 'dark'
         ? (isMobile ? '#e9e9e9' : '#E4E4E7')
         : (isMobile ? '#161616' : '#1b1b18')
     };
@@ -173,27 +173,29 @@ const Fretboard = forwardRef(({ }: FretboardProps, ref) => { // TODO: pass song
       className="relative w-full h-full"
       style={{ clipPath: 'inset(-240px)', position: 'relative', aspectRatio: '5 / 2' }} // Ensure the container is relative
     >
-      <button
-        onClick={handlePlaySong} 
-        aria-label={isPlaying ? "Pause the tune" : "Play the tune"}
-        className={`play-button flex items-center justify-center transition duration-200 
-          ${theme === 'dark' ? 'bg-gray-800 text-white hover:bg-gray-700' : 'bg-white text-black hover:bg-gray-200'}`}
-        style={{ 
-          position: 'absolute', 
-          bottom: '20%', 
-          right: '0%', 
-          zIndex: 10, 
-          borderRadius: '50%', // Make the button circular
-          width: '3vw', // Set a fixed width
-          height: '3vw' // Set a fixed height
-        }} // Added zIndex for clickability
-      >
-        {isPlaying ? (
-          <IconPlayerPauseFilled size="50%" /> // Render pause icon when playing
-        ) : (
-          <IconPlayerPlayFilled size="50%" /> // Render play icon when not playing
-        )}
-      </button>
+      {false && ( // Block song playing for now, to be released later
+        <button
+          onClick={handlePlaySong}
+          aria-label={isPlaying ? "Pause the tune" : "Play the tune"}
+          className={`play-button flex items-center justify-center transition duration-200 
+            ${theme === 'dark' ? 'bg-gray-800 text-white hover:bg-gray-700' : 'bg-white text-black hover:bg-gray-200'}`}
+          style={{
+            position: 'absolute',
+            bottom: '20%',
+            right: '0%',
+            zIndex: 10,
+            borderRadius: '50%', // Make the button circular
+            width: '3vw', // Set a fixed width
+            height: '3vw' // Set a fixed height
+          }} // Added zIndex for clickability
+        >
+          {isPlaying ? (
+            <IconPlayerPauseFilled size="50%" /> // Render pause icon when playing
+          ) : (
+            <IconPlayerPlayFilled size="50%" /> // Render play icon when not playing
+          )}
+        </button>
+      )}
       <svg
         width={svgWidth}
         height={svgHeight}
