@@ -1,16 +1,16 @@
 import React from 'react';
 import Link from "next/link";
-import labels from "@/constants/labels.json";
+import labels from "@/lib/labels.json";
 
 const CurrentPosition = () => {
   return (
-    <div className="mt-8 md:mt-56 font-sans text-gray-600 dark:text-gray-400">
+    <div className="mt-8 md:mt-56 font-sans text-tertiary dark:text-tertiary-dark">
         <h2 className="text-md">{labels.current.label}</h2>
         <div className="flex items-center mt-1 text-md">
-          <span className="text-gray-800 dark:text-white">{labels.current.position}
+          <span className="text-primary dark:text-primary-dark">{labels.current.position}
             <Link
               href={labels.current.company.url}
-              className="underline underline-offset-4 inline-flex items-center gap-2 hover:text-gray-400 transition-colors"
+              className="underline underline-offset-4 inline-flex items-center gap-2 hover:text-tertiary-dark transition-colors"
               target="_blank"
               rel="noopener noreferrer"
             >

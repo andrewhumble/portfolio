@@ -1,9 +1,9 @@
 import React from "react";
-import { IconMenu } from "@tabler/icons-react";
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
 import { IconTerminal2 } from "@tabler/icons-react";
 import { useTheme } from "@/providers/ThemeProvider";
 import Link from "next/link";
+import Menu from "@/components/Menu";
 
 interface NavBarProps {
     fretboardRef: React.RefObject<{ pluckStrings: () => void } | null>;
@@ -21,13 +21,13 @@ export const NavBar: React.FC<NavBarProps> = ({ fretboardRef, className }) => {
     }
 
     return (
-        <nav className={`${className} py-2 bottom-0 flex flex-row justify-between items-center ml-6 mr-4 text-black dark:text-white`}>
+        <nav className={`${className} py-2 flex flex-row justify-between items-center ml-6 mr-4 text-black dark:text-primary-dark z-50`}>
             <div className="flex items-center">
                 <Link href="/">
                     <IconTerminal2 size={24} />
                 </Link>
             </div>
-            <div className="flex items-center space-x-4"> {/* Added space between items */}
+            <div className="flex items-center space-x-4">
                 <div className="flex rounded">
                     <DarkModeSwitch
                         checked={theme === 'dark'}
@@ -37,11 +37,7 @@ export const NavBar: React.FC<NavBarProps> = ({ fretboardRef, className }) => {
                     />
                 </div>
                 <div className="rounded">
-                    <IconMenu
-                        className="px-2 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 hover:rounded hover:border hover:border-gray-200 cursor-pointer"
-                        size={36}
-                        onClick={() => window.location.reload()}
-                    />
+                    <Menu />
                 </div>
             </div>
         </nav>

@@ -1,30 +1,42 @@
 import React from 'react';
 import Link from 'next/link';
-import { IconBrandLinkedin, IconBrandGithub, IconBrandMedium, IconMail } from '@tabler/icons-react'; // Import Tabler icons
+import { IconBrandLinkedin, IconBrandGithub, IconMail } from '@tabler/icons-react'; // IconBrandMedium
 
-interface FooterProps {
-  className?: string; // Accepts an optional className prop
+interface SocialLink {
+  href: string;
+  Icon: React.ComponentType<{ size: number; className: string }>;
+  external?: boolean;
 }
 
-const Footer: React.FC<FooterProps> = ({ className }) => {
-  return (
-    <footer className={`text-white pt-12 ${className}`}>
-      <div className="flex justify-center space-x-6">
-        <Link href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
-          <IconBrandLinkedin size={36} className="hover:text-gray-400 transition-colors duration-300" />
+const socialLinks: SocialLink[] = [
+  { href: "https://www.linkedin.com/in/andrewhumble", Icon: IconBrandLinkedin, external: true },
+  { href: "https://github.com/andrewhumble", Icon: IconBrandGithub, external: true },
+  // { href: "https://medium.com/@yourprofile", Icon: IconBrandMedium, external: true },
+  { href: "mailto:cahumble7@gmail.com", Icon: IconMail }
+];
+
+interface FooterProps {
+  className?: string;
+}
+
+const Footer: React.FC<FooterProps> = ({ className = "" }) => (
+  <footer className={`pt-12 ${className}`}>
+    <div className="flex justify-center space-x-6">
+      {socialLinks.map(({ href, Icon, external }) => (
+        <Link
+          key={href}
+          href={href}
+          target={external ? "_blank" : undefined}
+          rel={external ? "noopener noreferrer" : undefined}
+        >
+          <Icon
+            size={36}
+            className="text-gray-700 dark:text-tertiary-dark hover:text-gray-400 dark:hover:text-gray-200 transition-colors duration-200"
+          />
         </Link>
-        <Link href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer">
-          <IconBrandGithub size={36} className="hover:text-gray-400 transition-colors duration-300" />
-        </Link>
-        <Link href="https://medium.com/@yourprofile" target="_blank" rel="noopener noreferrer">
-          <IconBrandMedium size={36} className="hover:text-gray-400 transition-colors duration-300" />
-        </Link>
-        <Link href="mailto:youremail@example.com">
-          <IconMail size={36} className="hover:text-gray-400 transition-colors duration-300" />
-        </Link>
-      </div>
-    </footer>
-  );
-};
+      ))}
+    </div>
+  </footer>
+);
 
 export default Footer;

@@ -11,6 +11,7 @@
   "dependencies": {
     "@tabler/icons-react": "^3.30.0",
     "@tailwindcss/vite": "^4.0.6",
+    "@tonaljs/tonal": "^4.10.0",
     "canvas": "^3.1.0",
     "clsx": "^2.1.1",
     "framer-motion": "^12.4.2",
@@ -26,6 +27,7 @@
     "react-responsive": "^10.0.0",
     "react-toggle-dark-mode": "^1.1.1",
     "tailwind-merge": "^3.0.1",
+    "tonal": "^6.4.0",
     "tone": "^15.0.4"
   },
   "devDependencies": {

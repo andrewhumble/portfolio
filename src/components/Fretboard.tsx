@@ -3,14 +3,22 @@
 import React, { useState, useEffect, forwardRef, useImperativeHandle } from "react";
 import { useTheme } from "@/providers/ThemeProvider";
 import { useMediaQuery } from 'react-responsive';
+import { playSong, pauseSong } from '@/lib/utils/tone';
+import { IconPlayerPlayFilled, IconPlayerPauseFilled } from "@tabler/icons-react";
 import * as Tone from 'tone';
 
-const Fretboard = forwardRef((props, ref) => {
+interface FretboardProps {
+  song?: Array<{ note: string; timestamp: number; scheduledTime: string }>; // Define the structure of the song prop
+}
+
+const Fretboard = forwardRef(({ song }: FretboardProps, ref) => {
   useImperativeHandle(ref, () => ({
     pluckStrings() {
       pluckStrings();
     },
   }));
+
+  const [isPlaying, setIsPlaying] = useState(false); // State to track if the song is playing
 
   const { theme } = useTheme();
   const [currentWidth, setCurrentWidth] = useState(window.innerWidth); // Track current page width
@@ -38,10 +46,10 @@ const Fretboard = forwardRef((props, ref) => {
   const duration = 1500;
   const frameRate = 100;
   const totalFrames = (duration / 1000) * frameRate;
-  const dampingFactor = 0.98;
-  const amplitude = 10;
+  const dampingFactor = 0.985;
+  const amplitude = 15;
   const stringSpacing = 50 * currentWidth / 1500;
-  const frequency = 3;
+  const frequency = 2.5;
 
   // Graphic positioning
   const svgTop = isMobile ? '30%' : isMedium ? '60%' : '50%';
@@ -137,8 +145,8 @@ const Fretboard = forwardRef((props, ref) => {
         ? (isMobile ? '#e9e9e9' : '#e9e9e9')
         : (isMobile ? '#161616' : '#161616'),
       pathStroke: theme === 'dark' 
-        ? (isMobile ? '#e9e9e9' : '#e9e9e9')
-        : (isMobile ? '#161616' : '#161616')
+        ? (isMobile ? '#e9e9e9' : '#E4E4E7')
+        : (isMobile ? '#161616' : '#1b1b18')
     };
   };
 
@@ -151,11 +159,41 @@ const Fretboard = forwardRef((props, ref) => {
     }
   };
 
+  const handlePlaySong = () => {
+    setIsPlaying(!isPlaying); // Toggle play state
+    if (isPlaying) {
+      pauseSong();
+    } else {
+      playSong(startWave);
+    }
+  };
+
   return (
     <div
       className="relative w-full h-full"
       style={{ clipPath: 'inset(-240px)', position: 'relative', aspectRatio: '5 / 2' }} // Ensure the container is relative
     >
+      {/* <button 
+        onClick={handlePlaySong} 
+        aria-label={isPlaying ? "Pause the tune" : "Play the tune"}
+        className={`play-button flex items-center justify-center transition duration-200 
+          ${theme === 'dark' ? 'bg-gray-800 text-white hover:bg-gray-700' : 'bg-white text-black hover:bg-gray-200'}`}
+        style={{ 
+          position: 'absolute', 
+          bottom: '20%', 
+          right: '0%', 
+          zIndex: 10, 
+          borderRadius: '50%', // Make the button circular
+          width: '3vw', // Set a fixed width
+          height: '3vw' // Set a fixed height
+        }} // Added zIndex for clickability
+      >
+        {isPlaying ? (
+          <IconPlayerPauseFilled size="50%" /> // Render pause icon when playing
+        ) : (
+          <IconPlayerPlayFilled size="50%" /> // Render play icon when not playing
+        )}
+      </button> */}
       <svg
         width={svgWidth}
         height={svgHeight}

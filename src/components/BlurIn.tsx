@@ -10,7 +10,7 @@ export const BlurIn = ({ children }: { children: React.ReactNode }) => {
       ref={ref}
       initial={{ filter: 'blur(20px)', opacity: 0 }}
       animate={isInView ? { filter: 'blur(0px)', opacity: 1 } : {}}
-      transition={{ delay: 1, duration: 1.2 }}
+      transition={{ duration: 1.2 }}
     >
       {children}
     </motion.div>

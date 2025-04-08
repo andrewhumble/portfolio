@@ -1,4 +1,4 @@
-import { cn } from '@/lib/utils';
+import { cn } from '@/lib/utils/utils';
 
 /**
  * 
@@ -61,7 +61,7 @@ export const Separator = ({
             className,
           )}
         ></div>
-        <div className="text-gray-600 uppercase w-fit dark:text-gray-300 text-nowrap">
+        <div className="text-tertiary uppercase w-fit dark:text-gray-300 text-nowrap">
           {label}
         </div>
         <div
