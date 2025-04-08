@@ -19,9 +19,9 @@ export default function Page() {
   const menuIsHorizontal = useMediaQuery({ query: `(max-width: ${navBarBreakpoint})` });
 
   return (
-    <div className="bg-white dark:bg-[#121212] md:flex overflow-x-hidden">
+    <div className="bg-gray-50 dark:bg-[#121212] md:flex overflow-x-hidden">
       <NavBar fretboardRef={fretboard} />
-      <main className={`${menuIsHorizontal ? 'mt-14' : ''} min-h-screen max-w-full bg-gray-100 dark:bg-[#0A0A0A] ml-2 mr-2 md:mr-0 md:ml-16 px-4 md:px-16 md:mt-8 pb-12 rounded-t-2xl md:rounded-tl-2xl border border-gray-200 dark:border-[#232323]`}>
+      <main className={`${menuIsHorizontal ? 'mt-14' : ''} min-h-screen max-w-full bg-white dark:bg-zinc-950 ml-2 mr-2 md:mr-0 md:ml-16 px-4 md:px-16 md:mt-8 pb-12 rounded-t-2xl md:rounded-tl-2xl border border-gray-200 dark:border-[#232323]`}>
         <div className="mx-auto px-4 md:pt-48 pt-12 md:px-6">
           <div className="flex flex-col md:flex-row md:gap-8">
             <div className="md:w-2/3 relative z-10">
@@ -61,7 +61,7 @@ export default function Page() {
             </TextFade>
           </div>
         </div>
-        <div className="pt-6 relative z-20 flex flex-col md:flex-row justify-between gap-4 md:gap-8 flex-wrap">
+        <div className="pt-6 relative z-20 flex flex-col md:flex-row justify-between gap-4 md:gap-6 flex-wrap">
           <div className="flex-1">
             <TextFade direction="up">
               <ProjectCard
@@ -78,7 +78,7 @@ export default function Page() {
             <TextFade direction="up">
               <ProjectCard
                 title="Cheaper-Dubbing"
-                description="75% cheaper video translation dubbing using Whisper + ElevenLabs TTS"
+                description="75% cheaper video translation dubbing using Whisper + ElevenLabs"
                 link="https://github.com/andrewhumble/cheaper-dubbing"
                 size={10}
                 icon={IconBrandGithub}

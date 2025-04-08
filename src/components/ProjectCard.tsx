@@ -20,7 +20,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, link, ima
   const [hoveredLink, setHoveredLink] = useState(false);
 
   return (
-    <div style={{ height: `${size}rem` }} className="border w-full rounded-2xl overflow-hidden bg-gray-100 dark:bg-zinc-950 dark:border-zinc-900 p-4 md:p-6">
+    <div style={{ height: `${size}rem` }} className="border w-full rounded-2xl overflow-hidden bg-gray-50 dark:bg-[#121212] dark:border-zinc-900 p-4 md:p-6">
       <div className="text-start">
         <h3 className="text-xl md:text-2xl font-bold font-mackinac dark:text-zinc-200 text-zinc-900">
           <Link
@@ -47,7 +47,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, link, ima
             ))}
           </div>
         )}
-        <p className="font-sans text-lg dark:text-zinc-500 text-zinc-600">
+        <p className="font-sans text-lg dark:text-zinc-400 text-zinc-600">
           {description}
         </p>
         {imageSrc && imageAlt && (

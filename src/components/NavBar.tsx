@@ -26,7 +26,7 @@ const NavBar: React.FC<NavBarProps> = ({ fretboardRef, className }) => {
 
     return menuIsHorizontal ? (
         <nav
-            className={`${className} bg-white dark:bg-[#121212] y-2 flex flex-row justify-between items-center py-2 px-6 text-black dark:text-primary-dark fixed top-0 left-0 right-0 z-50`}
+            className={`${className} y-2 flex flex-row justify-between items-center py-2 px-6 text-black dark:text-primary-dark fixed top-0 left-0 right-0 z-50`}
             style={{ height: '3.5rem' }}
         >
             <div className="flex items-center">
