@@ -11,7 +11,7 @@ interface FretboardProps {
   song?: Array<{ note: string; timestamp: number; scheduledTime: string }>; // Define the structure of the song prop
 }
 
-const Fretboard = forwardRef(({ song }: FretboardProps, ref) => {
+const Fretboard = forwardRef(({ }: FretboardProps, ref) => { // TODO: pass song
   useImperativeHandle(ref, () => ({
     pluckStrings() {
       pluckStrings();
@@ -173,7 +173,7 @@ const Fretboard = forwardRef(({ song }: FretboardProps, ref) => {
       className="relative w-full h-full"
       style={{ clipPath: 'inset(-240px)', position: 'relative', aspectRatio: '5 / 2' }} // Ensure the container is relative
     >
-      {/* <button 
+      <button
         onClick={handlePlaySong} 
         aria-label={isPlaying ? "Pause the tune" : "Play the tune"}
         className={`play-button flex items-center justify-center transition duration-200 
@@ -193,7 +193,7 @@ const Fretboard = forwardRef(({ song }: FretboardProps, ref) => {
         ) : (
           <IconPlayerPlayFilled size="50%" /> // Render play icon when not playing
         )}
-      </button> */}
+      </button>
       <svg
         width={svgWidth}
         height={svgHeight}
