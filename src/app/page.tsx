@@ -9,7 +9,6 @@ import IntroSection from "@/components/IntroSection";
 import CurrentPosition from "@/components/CurrentPosition";
 import ProjectCard from "@/components/ProjectCard";
 import Fretboard from "@/components/Fretboard";
-import TextFade from "@/components/TextFade";
 import Separator from "@/components/Separator";
 import Footer from "@/components/Footer";
 
@@ -35,69 +34,59 @@ export default function Page() {
         </div>
         <div className={`${tooSmallForFretboard ? 'pt-12' : ''} md:pt-24 relative z-20 flex flex-col md:flex-row justify-between gap-4 md:gap-6 flex-wrap`}>
           <div className="flex-1">
-            <TextFade direction="up">
-              <ProjectCard
-                title="PomoPlaylist.com"
-                description="Leveraging the Spotify API to listen to turn music into a Pomodoro timer for productivity and fun."
-                link="https://www.pomoplaylist.com/"
-                imageSrc="/pomoplaylist.png"
-                imageAlt="PomoPlaylist"
-                size={24}
-                skills={['Python', 'Flask', 'APIs']}
-              />
-            </TextFade>
+            <ProjectCard
+              title="PomoPlaylist.com"
+              description="Leveraging the Spotify API to listen to turn music into a Pomodoro timer for productivity and fun."
+              link="https://www.pomoplaylist.com/"
+              imageSrc="/pomoplaylist.png"
+              imageAlt="PomoPlaylist"
+              size={30}
+              skills={['Python', 'Flask', 'APIs']}
+            />
           </div>
           <div className="flex-1">
-            <TextFade direction="up">
-              <ProjectCard
-                title="Patent Proposal (US20240103797A1)"
-                description='"Indicating health, status, or condition of a monitored target using degraded audio quality." — a.k.a. using music for system health monitoring'
-                link="https://patents.google.com/patent/US20240103797A1/en?oq=US20240103797A1"
-                imageSrc="/patent-figure.jpg"
-                imageAlt="Patent Figure"
-                size={24}
-                skills={['SQL', 'Python', 'Audio Manipulation']}
-              />
-            </TextFade>
+            <ProjectCard
+              title="Patent Proposal (US20240103797A1)"
+              description='"Indicating health, status, or condition of a monitored target using degraded audio quality." — aka using music for system health monitoring'
+              link="https://patents.google.com/patent/US20240103797A1/en?oq=US20240103797A1"
+              imageSrc="/patent-figure.jpg"
+              imageAlt="Patent Figure"
+              size={30}
+              skills={['SQL', 'Python', 'Audio Manipulation']}
+            />
           </div>
         </div>
         <div className="pt-6 relative z-20 flex flex-col md:flex-row justify-between gap-4 md:gap-6 flex-wrap">
           <div className="flex-1">
-            <TextFade direction="up">
-              <ProjectCard
-                title="andrewhumble.dev"
-                description="This site! Hosted publicly on GitHub."
-                link="https://github.com/andrewhumble/portfolio"
-                size={10}
-                icon={IconBrandGithub}
-                skills={['Typescript', 'NextJS', 'Tailwind']}
-              />
-            </TextFade>
+            <ProjectCard
+              title="andrewhumble.dev"
+              description="This site! Hosted publicly on GitHub."
+              link="https://github.com/andrewhumble/portfolio"
+              size={10}
+              icon={IconBrandGithub}
+              skills={['Typescript', 'NextJS', 'Tailwind']}
+            />
           </div>
           <div className="flex-1 pb-6">
-            <TextFade direction="up">
-              <ProjectCard
-                title="Cheaper-Dubbing"
-                description="75% cheaper video translation dubbing using Whisper + ElevenLabs"
-                link="https://github.com/andrewhumble/cheaper-dubbing"
-                size={10}
-                icon={IconBrandGithub}
-                skills={['Python', 'OpenAI Whisper', 'ElevenLabs']}
-              />
-            </TextFade>
+            <ProjectCard
+              title="Cheaper-Dubbing"
+              description="75% cheaper video translation dubbing using Whisper + ElevenLabs"
+              link="https://github.com/andrewhumble/cheaper-dubbing"
+              size={10}
+              icon={IconBrandGithub}
+              skills={['Python', 'OpenAI Whisper', 'ElevenLabs']}
+            />
           </div>
         </div>
         <div className="flex-1 pb-12">
-          <TextFade direction="up">
-            <ProjectCard
-              title="My Resume"
-              description="One view of what I've done, written in LaTeX."
-              link="/andrewhumble_resume.pdf"
-              size={10}
-              icon={IconFileCv}
-              skills={['LaTeX']}
-            />
-          </TextFade>
+          <ProjectCard
+            title="My Resume"
+            description="One view of what I've done, written in LaTeX."
+            link="/andrewhumble_resume.pdf"
+            size={10}
+            icon={IconFileCv}
+            skills={['LaTeX']}
+          />
         </div>
         <Separator />
         <Footer />

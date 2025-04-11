@@ -20,6 +20,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, link, ima
   const [hoveredLink, setHoveredLink] = useState(false);
 
   return (
+    <TextFade direction="up">
     <div style={{ height: `${size}rem` }} className="border w-full rounded-2xl overflow-hidden bg-gray-50 dark:bg-[#121212] dark:border-zinc-900 p-4 md:p-6">
       <div className="text-start">
         <h3 className="text-xl md:text-2xl font-bold font-mackinac dark:text-zinc-200 text-zinc-900">
@@ -63,6 +64,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, link, ima
         )}
       </div>
     </div>
+    </TextFade>
   );
 };
 

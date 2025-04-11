@@ -17,6 +17,8 @@ export default function TextFade({
   duration?: number;
   distance?: number;
 }) {
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   const FADE_DOWN = {
     show: { opacity: 1, x: 0, y: 0, transition: { duration, type: 'spring' } },
     hidden: { opacity: 0, y: direction === 'down' ? -distance : direction === 'up' ? distance: 0, x: direction === 'right' ? -distance : direction === 'left' ? distance : 0 },
@@ -26,8 +28,8 @@ export default function TextFade({
   return (
     <motion.div
       ref={ref}
-      initial="hidden"
-      animate={isInView ? 'show' : ''}
+      initial={prefersReducedMotion ? "show" : "hidden"}
+      animate={isInView && !prefersReducedMotion ? 'show' : ''}
       variants={{
         hidden: {},
         show: {

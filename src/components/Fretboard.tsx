@@ -14,7 +14,9 @@ interface FretboardProps {
 const Fretboard = forwardRef(({ }: FretboardProps, ref) => { // TODO: pass song
   useImperativeHandle(ref, () => ({
     pluckStrings() {
-      pluckStrings();
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) { // Check for reduced motion preference
+        pluckStrings();
+      }
     },
   }));
 
