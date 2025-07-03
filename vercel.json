@@ -1,0 +1,9 @@
+{
+    "rewrites": [
+      {
+        "source": "/atl-property-map/:path*",
+        "destination": "https://atl-property-map.fly.dev/:path*"
+      }
+    ]
+  }
+  

@@ -59,15 +59,26 @@ export default function Page() {
         <div className="pt-6 relative z-20 flex flex-col md:flex-row justify-between gap-4 md:gap-6 flex-wrap">
           <div className="flex-1">
             <ProjectCard
+              title="Atlanta Property Map"
+              description="Developed a full-stack web application that provides real-time property search and visualization for Atlanta's Fulton and Dekalb counties, enabling users to filter properties by land value, total value, and acreage with interactive mapping capabilities."
+              link="https://andrewhumble.dev/atl-property-map/"
+              size={30}
+              skills={['Python', 'Flask', 'JavaScript', 'REST APIs', 'Caching', 'Marker Clustering']}
+            />
+          </div>
+          <div className="flex-1">
+            <ProjectCard
               title="andrewhumble.dev"
               description="This site! Hosted publicly on GitHub."
               link="https://github.com/andrewhumble/portfolio"
-              size={10}
+              size={30}
               icon={IconBrandGithub}
               skills={['Typescript', 'NextJS', 'Tailwind']}
             />
           </div>
-          <div className="flex-1 pb-6">
+        </div>
+        <div className="pt-6 relative z-20 flex flex-col md:flex-row justify-between gap-4 md:gap-6 flex-wrap">
+          <div className="flex-1">
             <ProjectCard
               title="Cheaper-Dubbing"
               description="75% cheaper video translation dubbing using Whisper + ElevenLabs"
@@ -77,16 +88,16 @@ export default function Page() {
               skills={['Python', 'OpenAI Whisper', 'ElevenLabs']}
             />
           </div>
-        </div>
-        <div className="flex-1 pb-12">
-          <ProjectCard
-            title="My Resume"
-            description="One view of what I've done, written in LaTeX."
-            link="/andrewhumble_resume.pdf"
-            size={10}
-            icon={IconFileCv}
-            skills={['LaTeX']}
-          />
+          <div className="flex-1 pb-6">
+            <ProjectCard
+              title="My Resume"
+              description="One view of what I've done, written in LaTeX."
+              link="/andrewhumble_resume.pdf"
+              size={10}
+              icon={IconFileCv}
+              skills={['LaTeX']}
+            />
+          </div>
         </div>
         <Separator />
         <Footer />
