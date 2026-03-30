@@ -1,3 +1,6 @@
+import { IconExternalLink, IconFile } from "@tabler/icons-react";
+import { IconBrandGithub } from '@tabler/icons-react';
+
 export const navBarBreakpoint = "999px";
 
 export const defaultSong = [
@@ -1711,4 +1714,69 @@ export const defaultSong = [
         "timestamp": 235,
         "string": 5
     }
+];
+
+export interface Project {
+    title: string;
+    description: string;
+    link: string;
+    imageSrc?: string;
+    imageAlt?: string;
+    size: string;
+    icon?: React.ElementType;
+    skills: string[];
+}
+
+export const CARD_SIZE = {
+    large: '30rem',
+    small: '12rem',
+}
+
+export const projects: Project[] = [
+    {
+        title: "Zero Day Jobs",
+        description: "Track top companies and get alerted the moment new roles go live, so you can apply on day zero, when it matters most.",
+        link: "https://www.zerodayjobs.com/",
+        imageSrc: "/zerodayjobs_light.png",
+        imageAlt: "ZeroDayJobs",
+        size: CARD_SIZE.large,
+        skills: ['Next.js', 'Supabase', 'Web Scraping', 'APIs'],
+        icon: IconExternalLink
+    },
+    {
+        title: "Cheaper-Dubbing",
+        description: "75% cheaper video dubbing using Whisper + ElevenLabs.",
+        link: "https://github.com/andrewhumble/cheaper-dubbing",
+        size: CARD_SIZE.small,
+        skills: ['Python', 'OpenAI Whisper', 'ElevenLabs'],
+        icon: IconBrandGithub
+    },
+    {
+        title: "My Resume",
+        description: "One view of what I've done, written in LaTeX.",
+        link: "/andrewhumble_resume.pdf",
+        size: CARD_SIZE.small,
+        skills: ['LaTeX'],
+        icon: IconFile
+    },
+    {
+        title: "\"Indicating health, status, or condition of a monitored target using degraded audio quality\" (US20240103797A1)",
+        description: 'Lead inventor on approved patent for musical system health monitoring.',
+        link: "https://patents.google.com/patent/US20240103797A1/en?oq=US20240103797A1",
+        imageSrc: "/patent-figure.jpg",
+        imageAlt: "Patent Figure",
+        size: CARD_SIZE.large,
+        skills: ['Accessibility', 'Audio Manipulation', 'SQL', 'Python'],
+        icon: IconExternalLink
+    },
+    {
+        title: "PomoPlaylist.com",
+        description: "Leveraging the Spotify API to listen to turn music into a Pomodoro timer.",
+        link: "https://www.pomoplaylist.com/",
+        imageSrc: "/pomoplaylist.png",
+        imageAlt: "PomoPlaylist",
+        size: CARD_SIZE.large,
+        skills: ['Python', 'Flask', 'APIs'],
+        icon: IconExternalLink
+    },
 ];

@@ -162,12 +162,12 @@ const Fretboard = forwardRef(({ }: FretboardProps, ref) => { // TODO: pass song
   };
 
   const handlePlaySong = () => {
-    setIsPlaying(!isPlaying); // Toggle play state
     if (isPlaying) {
       pauseSong();
     } else {
       playSong(startWave);
     }
+    setIsPlaying(!isPlaying); // Toggle play state
   };
 
   return (
@@ -218,6 +218,7 @@ const Fretboard = forwardRef(({ }: FretboardProps, ref) => { // TODO: pass song
           fill={circleFill}
           stroke={circleStroke}
           strokeWidth="3"
+          onClick={handlePlaySong}
         />
         {strings.map((stringPoints, i) => (
           <path

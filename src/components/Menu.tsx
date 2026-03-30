@@ -63,7 +63,7 @@ const Menu = () => {
                             <IconX size={24} stroke={1.5} />
                         </button>
                         <div className="flex flex-col justify-between p-6">
-                            <Image src="/headshot.png" alt="Avatar" className="mb-8 rounded-full" width={60} height={60} />
+                            {/* <Image src="/headshot.png" alt="Avatar" className="mb-8 rounded-full" width={60} height={60} /> */}
                             <div className="flex flex-col w-full">
                             {[
                                     { name: 'LinkedIn', url: 'https://www.linkedin.com/in/andrewhumble' },

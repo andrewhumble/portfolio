@@ -1,38 +1,81 @@
 import type { Config } from "tailwindcss";
 
 export default {
-  darkMode: 'class',
+  darkMode: ['class'],
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-        primary: {
-          DEFAULT: "#101827", // Default color (light mode)
-          dark: "#FFFFFF", // Dark mode variant
-        },
-        secondary: {
-          DEFAULT: "#52525B", // Default color (light mode)
-          dark: "#71717A", // Dark mode variant
-        },
-        tertiary: {
-          DEFAULT: "#4b5563", // Default color (light mode)
-          dark: "#9ca3af", // Dark mode variant
-        },
-      },
-      fontFamily: {
-        'sans': ['Mona Sans'],
-        'mackinac': ['p22-mackinac-pro', 'serif', 'sans-serif'],
-      },
-      screens: {
-        md: '999px', // Default is 768pc
-      },
-    },
+  	extend: {
+  		colors: {
+  			background: 'hsl(var(--background))',
+  			foreground: 'hsl(var(--foreground))',
+  			primary: {
+  				DEFAULT: 'hsl(var(--primary))',
+  				dark: '#FFFFFF',
+  				foreground: 'hsl(var(--primary-foreground))'
+  			},
+  			secondary: {
+  				DEFAULT: 'hsl(var(--secondary))',
+  				dark: '#71717A',
+  				foreground: 'hsl(var(--secondary-foreground))'
+  			},
+  			tertiary: {
+  				DEFAULT: '#4b5563',
+  				dark: '#9ca3af'
+  			},
+  			card: {
+  				DEFAULT: 'hsl(var(--card))',
+  				foreground: 'hsl(var(--card-foreground))'
+  			},
+  			popover: {
+  				DEFAULT: 'hsl(var(--popover))',
+  				foreground: 'hsl(var(--popover-foreground))'
+  			},
+  			muted: {
+  				DEFAULT: 'hsl(var(--muted))',
+  				foreground: 'hsl(var(--muted-foreground))'
+  			},
+  			accent: {
+  				DEFAULT: 'hsl(var(--accent))',
+  				foreground: 'hsl(var(--accent-foreground))'
+  			},
+  			destructive: {
+  				DEFAULT: 'hsl(var(--destructive))',
+  				foreground: 'hsl(var(--destructive-foreground))'
+  			},
+  			border: 'hsl(var(--border))',
+  			input: 'hsl(var(--input))',
+  			ring: 'hsl(var(--ring))',
+  			chart: {
+  				'1': 'hsl(var(--chart-1))',
+  				'2': 'hsl(var(--chart-2))',
+  				'3': 'hsl(var(--chart-3))',
+  				'4': 'hsl(var(--chart-4))',
+  				'5': 'hsl(var(--chart-5))'
+  			}
+  		},
+  		fontFamily: {
+  			sans: [
+  				'Mona Sans'
+  			],
+  			mackinac: [
+  				'p22-mackinac-pro',
+  				'serif',
+  				'sans-serif'
+  			]
+  		},
+  		screens: {
+  			md: '999px'
+  		},
+  		borderRadius: {
+  			lg: 'var(--radius)',
+  			md: 'calc(var(--radius) - 2px)',
+  			sm: 'calc(var(--radius) - 4px)'
+  		}
+  	}
   },
   plugins: [],
 } satisfies Config;

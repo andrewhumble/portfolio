@@ -10,7 +10,7 @@ interface ProjectCardProps {
 
 const WritingCard: React.FC<ProjectCardProps> = ({ title, byline, description, link }) => {
   return (
-    <div className="border w-full rounded-2xl overflow-hidden bg-gray-100 dark:bg-zinc-950 dark:border-zinc-900 p-4 md:p-6">
+    <div className="border w-full rounded-2xl overflow-hidden bg-gray-50 dark:bg-[#121212] dark:border-zinc-900 p-4 md:p-6">
       <div className="text-start">
         <h3 className="text-xl md:text-2xl font-bold font-mackinac dark:text-zinc-200 text-zinc-900 mb-1">
           {link ?
