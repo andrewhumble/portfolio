@@ -1,5 +1,6 @@
 import React from "react";
-import { DarkModeSwitch } from 'react-toggle-dark-mode';
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const { DarkModeSwitch } = require("react-toggle-dark-mode");
 import { IconTerminal2 } from "@tabler/icons-react";
 import { useTheme } from "@/providers/ThemeProvider";
 import Link from "next/link";
