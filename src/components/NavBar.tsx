@@ -1,5 +1,8 @@
 import React from "react";
-import { DarkModeSwitch } from "react-toggle-dark-mode";
+import { DarkModeSwitch as _DarkModeSwitch } from "react-toggle-dark-mode";
+
+// Work around react-toggle-dark-mode's outdated React types
+const DarkModeSwitch = _DarkModeSwitch as unknown as React.FC<React.ComponentProps<typeof _DarkModeSwitch>>;
 import { IconHelicopterLandingFilled } from "@tabler/icons-react";
 import { useTheme } from "@/providers/ThemeProvider";
 import { useMediaQuery } from 'react-responsive';
