@@ -1,8 +1,6 @@
 import React from "react";
-import { DarkModeSwitch as _DarkModeSwitch } from "react-toggle-dark-mode";
-
-// Work around react-toggle-dark-mode's outdated React types
-const DarkModeSwitch = _DarkModeSwitch as unknown as React.FC<React.ComponentProps<typeof _DarkModeSwitch>>;
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const { DarkModeSwitch } = require("react-toggle-dark-mode");
 import { IconHelicopterLandingFilled } from "@tabler/icons-react";
 import { useTheme } from "@/providers/ThemeProvider";
 import { useMediaQuery } from 'react-responsive';
