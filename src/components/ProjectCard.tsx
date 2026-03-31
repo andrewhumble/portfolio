@@ -15,7 +15,7 @@ interface ProjectCardProps {
   size?: string;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, link, imageSrc, imageAlt, icon, skills, size }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, link, imageSrc, imageAlt, icon, skills }) => {
   const [hoveredLink, setHoveredLink] = useState(false);
 
   return (
@@ -51,7 +51,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, link, ima
               ))}
             </div>
           )}
-          <p className="pb-4 font-sans text-lg dark:text-zinc-400 text-zinc-600">
+          <p className={`${imageSrc ? 'pb-4' : ''} font-sans text-lg dark:text-zinc-400 text-zinc-600`}>
             {description}
           </p>
           {imageSrc && imageAlt && (

@@ -1770,6 +1770,16 @@ export const projects: Project[] = [
         icon: IconExternalLink
     },
     {
+        title: "TailorCV",
+        description: "AI-powered LaTeX resume optimizer that tailors your resume to job descriptions.",
+        link: "https://tailor-cv-gamma.vercel.app/",
+        imageSrc: "/tailor-cv.png",
+        imageAlt: "Tailor CV",
+        size: CARD_SIZE.large,
+        skills: ['Next.js', 'TypeScript', 'Google Gemini', 'LaTeX'],
+        icon: IconExternalLink
+    },
+    {
         title: "PomoPlaylist.com",
         description: "Leveraging the Spotify API to listen to turn music into a Pomodoro timer.",
         link: "https://www.pomoplaylist.com/",
