@@ -5,7 +5,6 @@ import { useMediaQuery } from 'react-responsive';
 import { navBarBreakpoint  } from '@/lib/constants';
 import TextFade from "@/components/TextFade";
 import Link from 'next/link';
-import Image from 'next/image';
 
 const Menu = () => {
     const [isMenuVisible, setIsMenuVisible] = useState(false);
