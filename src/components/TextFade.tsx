@@ -20,7 +20,7 @@ export default function TextFade({
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   const FADE_DOWN = {
-    show: { opacity: 1, x: 0, y: 0, transition: { duration, type: 'spring' } },
+    show: { opacity: 1, x: 0, y: 0, transition: { duration, type: 'spring' as const } },
     hidden: { opacity: 0, y: direction === 'down' ? -distance : direction === 'up' ? distance: 0, x: direction === 'right' ? -distance : direction === 'left' ? distance : 0 },
   };
   const ref = React.useRef(null);
